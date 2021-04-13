@@ -1,0 +1,35 @@
+.app {
+  background-image: url("./assets/bg.png");
+  object-fit: cover;
+  height: 100vh;
+  color: lightgrey;
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+}
+
+.customCard {
+  border: 1px solid lightgrey;
+}
+
+.cardImg {
+  height: 400px;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    height: 100px;
+  }
+}
+
+a {
+  color: lightgray !important;
+}
+
+a:hover {
+  border: none;
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden !important;
+}
