@@ -48,14 +48,14 @@ function App() {
           {cards.map((item, index) => (
             <Col
               key={index}
-              xs={{ span: 6 }}
-              sm={{ span: 6 }}
+              xs={{ span: 12 }}
+              sm={{ span: 12 }}
               lg={{ span: 6 }}
               className="text-center p-2"
             >
               <div className="customCard p-3">
                 <a href={item.url}>
-                  <p className="text-overflow">{item.title}</p>
+                  <p className="text-overflow font-weight-bold">{item.title}</p>
                   <img src={item.image} className="cardImg" alt={item.title} />
                 </a>
               </div>
