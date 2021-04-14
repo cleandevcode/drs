@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+  RewriteRule ^(css|js)/(.*)\.[0-9]+\.(.*)$ /$1/$2.$3 [L]
+  RewriteCond %{HTTP_HOST} ^www.drs-securitygroup.com$ [NC]
+  RewriteRule ^(.*)$ http://drs-securitygroup.com/$1 [R=301,L]
+
+</IfModule>
+
+## HTTP Strict Transport Security
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+</IfModule>
+
+## Cache-Control
+<IfModule mod_headers.c>
+  # 1 YEAR
+  <FilesMatch "\.(js|css|flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=29030400, public"
+  </FilesMatch>
+</IfModule>
