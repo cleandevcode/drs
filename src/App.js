@@ -63,9 +63,7 @@ function App() {
           ))}
           <div className="w-100 text-center">
             <p className="p-0 m-0">Email us for more information</p>
-            <a href="mailto:info@drs-securitygroup.com">
-              info@drs-securitygroup.com
-            </a>
+            <a href="mailto:info@slotenmakerdrs.nl">info@slotenmakerdrs.nl</a>
           </div>
         </Row>
         <p className="text-center w-100 p-4">All rights reserved 2021</p>
